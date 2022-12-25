@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" property="og:image" content="{{ url_for('static', filename='images/social_image.jpg') }}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146380158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-146380158-1', { 'anonymize_ip': true });
+    </script>
+    {% block meta %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/output.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/all.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icons/website-favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/apple-touch-icon.png') }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='icons/apple-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='icons/apple-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='icons/apple-icon-76x76.png') }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='icons/apple-icon-114x114.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='icons/apple-icon-120x120.png') }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='icons/apple-icon-144x144.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='icons/apple-icon-152x152.png') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icons/apple-icon-180x180.png') }}" />
+  </head>
+  <body class="bg-neutral-50">
+    <div class="w-auto lg:w-3/4 mx-5 my-10 lg:mx-auto">
+      <div class="flex items-center my-10">
+        <img class="mr-5 rounded-full" src="{{ url_for('static', filename='images/profile_image_150x150.jpg') }}" alt="Profile image">
+          <div>
+            <h1 class="text-3xl text-indigo-600">Jean Guillet</h1>
+              <div class="flex items-center">
+                <i class="mr-2 fas fa-map-marker-alt fa-xs"></i>
+                <p>Paris, France</p>
+              </div>
+          </div>
+      </div>
+      {% block content %}
+      {% endblock %}
+      <div class="row">
+        <a class="pt-3 mx-auto to-top" href="#top">
+          <div style="font-size: 24px;" class="d-inline">
+            <i class="icons fas fa-arrow-up fa-xs"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
