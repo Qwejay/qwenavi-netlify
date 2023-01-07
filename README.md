@@ -1,7 +1,18 @@
-### Using flask and netlify
+# flask_netlify
 
-I followed the example from [here](https://medium.com/@francescaguiducci/how-to-build-a-simple-personal-website-with-python-flask-and-netlify-d800c97c283d) and then created this for others to use.
-Follow the steps on how to deploy on netlify to get this to work.
+Reference: https://testdriven.io/blog/static-site-flask-and-netlify/
 
-checkout [netlify](https://www.netlify.com/)
+Steps:
 
+- python3 -m venv venv
+- source venv/bin/activate
+- pip3 install Frozen-Flask
+- pip3 freeze > requirements.txt
+- pip3 install -r requirements.txt
+- export FLASK_APP=app.py
+- pip install black --upgrade
+- pip3 install black --upgrade
+- flask run
+- python3 freeze.py
+- git add . && git commit -m "c" && git push origin main
+- deactivate
